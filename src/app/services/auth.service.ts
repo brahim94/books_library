@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase';
-import { resolve } from 'path';
-import { reject } from 'q';
+
 
 @Injectable()
 
@@ -21,6 +20,7 @@ export class AuthService {
       }
     )
   }
+  
   signInUser(email: string, password: string) {
     return new Promise(
       (resolve, reject) => {
